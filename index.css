@@ -1,0 +1,209 @@
+
+/* Model css  */
+.howmany_task_modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.inner_modal{
+    width: 500px;
+    background-color: #FEF9D9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    box-shadow: 0 0 20px black;
+    padding: 5px;
+}
+.model_heading{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.inner_modal .desc{
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 0;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.input input{
+    /* width: 300px;/ */
+    margin: 10px 0;
+    padding: 5px;
+    width: 100px;
+}
+.start_btn{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.start_btn input{
+    padding: 5px;
+    text-align: center;
+    color: #D2E0FB;
+    background-color: #8EACCD;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.hide{
+    display: none;
+}
+/* model css end  */
+
+/* header css */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #D2E0FB;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+header{
+    width: 100%;
+    padding: 8px;
+    color: #8EACCD;
+    /* box-shadow: 2px 0px 5px #8EACCD; */
+}
+.heading{
+    font-weight: 300;
+    font-size: 32px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.tab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    margin: 0 5px;
+    background-color: #FEF9D9;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 0px 5px #DEE5D4;
+    padding: 10px;
+}
+.subtext{
+    font-family: sans-serif;
+    font-family: 600;
+    color: #8EACCD;
+}
+#status,#progress,#task_completed{
+    font-size: 22px;
+    font-weight: 700;
+}
+.timer_section{
+    margin: 80px 0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 8px solid #8EACCD;
+    position: relative;
+    align-items: center;
+    
+}
+.clock{
+    font-size: 60px;
+    font-weight: 700;
+}
+.right_status{
+    font-size: 35px;
+    font-weight: 200;
+}
+footer{
+    position: fixed;
+    bottom: 10px;
+    padding: 5px;
+    width: 1024px;
+}
+.footer{
+    color: #8EACCD;
+    text-align: center;
+}
+.progress_bar{
+    width: 100%;
+    margin: 20px 0px;
+    height: 10px;
+    background-color:#8EACCD ;
+    position: relative;
+    animation: progress_bar_shake 1s ease-in alternate-reverse infinite;
+}
+.progress_meter{
+    position: absolute;;
+    height: 10px;
+    z-index: 1;
+    background-color: white;
+    transition: all 1s linear;
+}
+
+@keyframes progress_bar_shake {
+    0%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+@media (min-width:1px) and (max-width:1024px) {
+    body{
+        width: 100%;
+        padding: 15px;
+    }
+    .inner_modal{
+    width: 85%;
+    margin: 5px;
+    }
+    .input{margin: 5px; font-size: 12px;}
+    .content{flex-direction: column;}
+    .tab{margin-bottom: 8px;}
+    .timer_section{flex-direction: column;}
+    .time{
+        margin: 5px;
+        width: 300px;
+        height: 300px;
+    }
+    .right_status{margin-top: 20px;}
+    .timer_section{margin: 0;}
+    .tab{height: 75px;}
+    footer{width: 100%;}
+    .right_status{font-size: 20px;}
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+       <div class="heading">
+        A Pomodoro App
+       </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="tab">
+                <div id="status"></div>
+                <div class="subtext">Status</div>
+            </div>
+            <div class="tab">
+                <div id="progress"></div>
+                <div class="subtext">Progress</div>
+            </div>
+            <div class="tab">
+                <div id="task_completed"></div>
+                <div class="subtext">Task Completed</div>
+            </div>
+        </div>
+        <div class="timer_section">
+            <div class="time">
+                <div class="clock" id="mins"></div>
+                <div class="clock">:</div>
+                <div class="clock" id="sec"></div>
+            </div>
+            <div class="right_status" id="focus_text">
+            </div>
+        </div>
+        <div class="progress_bar">
+            <div class="progress_meter" id="meter">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">@ Aswin Srinivasan - aswinsrini1@gmail.com</div>
+    </footer>
+ <div class="howmany_task_modal" id="modal">
+        <div class="inner_modal">
+            <div class="model_heading">A Pomodoro App</div>
+            <div class="desc">
+                A efficeint way to do your task on time without any preasure !
+            </div>
+            <form id="myform">
+                <div class="input">
+                    <div>Enter Number of task to complete</div>
+                    <div><input type="number" 
+                        min=1
+                        name="task_count"
+                        id="task_count" required ></div>
+                </div>
+                <div class="input">
+                    <div>Enter time each for task to complete (in minutes)</div>
+                    <div><input type="number" 
+                        min=1
+                        name="task_mins"
+                        id="task_mins" required ></div>
+                </div>
+                <div class="input">
+                    <div>Enter Break time between taks (5 to 10 min)</div>
+                    <div><input type="number" id="min_break"
+                        name="min_break"
+                        min=5
+                        max=10
+                        required
+                        ></div>
+                </div>
+                <div class="input">
+                    <div>Enter break time after 4 breaks(15 to 20 min)</div>
+                    <div><input type="number" id="max_break" required
+                    name="long_break"
+                    min=15
+                    max=20
+                    ></div>
+                </div>
+                <div class="start_btn">
+                    <input type="submit">
+                </div>
+            </form>
+
+        </div>
+    </div> 
+    <script src="index.js"></script>
+</body>
+</html>
